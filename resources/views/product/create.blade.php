@@ -21,13 +21,17 @@
             </div>
             <div class="form-group">
                 <input type="text" id="weight" class="form-control" name="weight" placeholder="weight">
+                <select name="unit" id="unit" class="form-control">
+                    <option value="ml">ml</option>
+                    <option value="gr">gr</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="category">Image</label>
                 <select name="image_id" id="image_id" class="form-control">
                     @foreach ($images as $image)
                     <option value="{{$image->id}}">
-                        {{$image->id}}
+                        {{$image->name}}
                     </option>
                     @endforeach
                 </select>

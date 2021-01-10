@@ -39,6 +39,7 @@ class ImageController extends Controller
     {
         $image = $request->file->store('file');
         Image::create([
+            'name' => $request->name,
             'file' => $image,
             'template' => $request->template
         ]);

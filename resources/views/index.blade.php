@@ -73,28 +73,38 @@
         }
     }
 
+    .txt-kuning {
+        color: #D9C145;
+    }
+
 </style>
 <section class="title">
-    <div class="container-fluid border-bottom py-5">
+    <div class="container-fluid border-bottom py-5" style="background-color:#D9C145">
         <div class="text-center mt-5">
-            <img class="h-100px img-fluid" src="{{asset('logo.jpg')}}" alt="">
+            <img class="h-100px img-fluid" src="{{asset('logo.png')}}" alt="">
             <div class="mt-5">
-                <p>Klinik Skin Care : <br>
-                    Jl. Siliwangi RT 005/RW 007 Jekulo, Kudus, Jawa Tengah , Indonesia. 59382
-                    <br> Telp : 02914246290</p>
+
+                <p>PT. Muntira Kosmeditama <br>
+                    Clinic Skin Care : Jl. Sunan Kudus No. 223, Kudus, Jawa Tengah, 59316 Indoneia
+                    <br> Telp : 0291439010</p>
+
+                <p>Manufacture : Jl. Kudus - Jepara No 5050 Garung Lor, Kaliwungu. Kudus
+                    <br> Telp : 0291444443
+                </p>
             </div>
             <div class="container">
                 <a target="_blank"
                     href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Mendaftar Reseller, Bagaimana Caranya?"
-                    class="btn btn-light txt-ijo w-100">
+                    class="btn btn-light txt-kuning w-100">
                     JOIN RESELLER
                 </a>
-                <button class="mt-3 add-button btn btn-light txt-ijo w-100">INSTALL APLIKASI</button>
+                <button class="mt-3 add-button btn btn-light txt-kuning w-100">INSTALL APLIKASI</button>
             </div>
         </div>
     </div>
 </section>
 @foreach ($images as $image)
+@if ($image->template == '2')
 <section class="content">
     <div class="container-fluid border-bottom py-5">
         <div class="row d-flex justify-content-center ">
@@ -102,7 +112,7 @@
                 <div class="container">
                     <div class="row">
                         <div>
-                            <a class="image-link" href="Asset/KATALOG 20 HAL IN COVER FIX PDF_page-0002.jpg">
+                            <a class="image-link" href="{{asset('storage/'.$image->file)}}">
                                 @foreach ($products as $product)
                                 @if ($loop->first)
                                 <img src="{{asset('storage/'.$image->file)}}" alt="">
@@ -114,7 +124,6 @@
                     <div class="row mt-2" data-aos="fade-down" data-aos-duration="1500">
                         @foreach ($products as $product)
                         @if ($product->image_id === $image->id)
-                        @if ($loop->index < 2)
                         <div class="col-sm-12 col-md-6 border pt-4">
                             <h3>{{$product->name}}</h3>
                             <h4>With {{$product->ingredient}}</h4>
@@ -122,19 +131,136 @@
                             <div class="pb-4">
                                 <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
                                 <a target="_blank"
-                                href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
-                                class="btn btn-light">BELI PRODUK</a>
+                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
+                                    class="btn btn-light">BELI PRODUK</a>
                             </div>
                         </div>
-                        @endif
                         @endif
                         @endforeach
                     </div>
                 </div>
             </div>
-
         </div>
 </section>
+@elseif($image->template == '1')
+<section class="content">
+    <div class="container-fluid border-bottom py-5">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <a class="image-link" href="{{asset('storage/'.$image->file)}}">
+                                @foreach ($products as $product)
+                                @if ($loop->first)
+                                <img src="{{asset('storage/'.$image->file)}}" alt="">
+                                @endif
+                                @endforeach
+                            </a>
+                        </div>
+                        @foreach ($products as $product)
+                        @if ($product->image_id === $image->id)
+                        <div class="col-sm-12 col-md-6 border pt-4 mt-2" data-aos="fade-right" data-aos-duration="1500">
+                            <h3>{{$product->name}}</h3>
+                            <h4>With {{$product->ingredient}}</h4>
+                            <p class="text-justify">{{$product->desc}}</p>
+                            <div class="pb-4">
+                                <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                                <a target="_blank"
+                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
+                                    class="btn btn-light">BELI PRODUK</a>
+                            </div>
+                            @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@elseif($image->template == '3')
+<section class="content">
+    <div class="container-fluid border-bottom py-5">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="row text-center">
+                        <div>
+                            <a class="image-link" href="{{asset('storage/'.$image->file)}}">
+                                @foreach ($products as $product)
+                                @if ($loop->first)
+                                <img src="{{asset('storage/'.$image->file)}}" alt="">
+                                @endif
+                                @endforeach
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        @foreach ($products as $product)
+                        @if ($product->image_id === $image->id)
+                        <div class="row" data-aos="fade-down" data-aos-duration="1500">
+                            <div class="col-md-12 border pt-4">
+                                <h3>{{$product->name}}</h3>
+                                <h4>With {{$product->ingredient}}</h4>
+                                <p class="text-justify">{{$product->desc}}</p>
+                                <div class="pb-4">
+                                    <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                                    <a target="_blank"
+                                        href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
+                                        class="btn btn-light">BELI PRODUK</a>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@elseif($image->template =='100')
+<section class="content">
+    <div class="container-fluid border-bottom py-5">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="row text-center">
+                        <div>
+                            <a class="image-link" href="{{asset('storage/'.$image->file)}}">
+                                @foreach ($products as $product)
+                                @if ($loop->first)
+                                <img src="{{asset('storage/'.$image->file)}}" alt="">
+                                @endif
+                                @endforeach
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mt-2" data-aos="fade-down" data-aos-duration="1500">
+                        <div class="col-md-12 border pt-4">
+                            @foreach ($products as $product)
+                            @if ($product->image_id === $image->id)
+                            <h3>{{$product->name}}</h3>
+                            <h4>with {{$product->ingredient}}</h4>
+                            <p class="text-justify">{{$product->desc}}</p>
+                            <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                            <div class="pb-4 text-center">
+                                <a target="_blank"
+                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},,apakah masih ada ?,apakah masih ada ?"
+                                    class="btn btn-light">BELI PRODUK</a>
+                            </div>
+                            @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+
 @endforeach
 
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     protected $fillable = [
-        'file','template'
+        'name','file','template'
     ];
 
     public function products()

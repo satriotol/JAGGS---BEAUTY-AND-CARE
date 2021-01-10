@@ -44,6 +44,7 @@ class ProductController extends Controller
             'price' => $request->price,
             'weight' => $request->weight,
             'image_id' => $request->image_id,
+            'unit' => $request->unit,
         ]);
         return redirect(route('image.index'));
         

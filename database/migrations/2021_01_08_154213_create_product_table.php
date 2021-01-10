@@ -19,7 +19,8 @@ class CreateProductTable extends Migration
             $table->string('ingredient');
             $table->longText('desc');
             $table->integer('price');
-            $table->integer('weight');
+            $table->string('weight');
+            $table->string('unit');
             $table->unsignedBigInteger('image_id');
             $table->timestamps();
         });

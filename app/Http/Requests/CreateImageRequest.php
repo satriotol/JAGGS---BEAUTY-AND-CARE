@@ -24,7 +24,7 @@ class CreateImageRequest extends FormRequest
     public function rules()
     {
         return [
-            'file'=>'required|image',
+            'file'=>'required|image|mimes:jpeg,png,jpg,gif,svg',
             'template'=>'required',
         ];
     }

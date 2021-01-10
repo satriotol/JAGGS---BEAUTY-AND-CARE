@@ -16,17 +16,17 @@
             </thead>
             <tbody>
                 @foreach ($images as $image)
-                    <tr>
-                        <td><img src="{{asset('storage/'.$image->file)}}"  width="auto" height="60px" alt=""></td>
-                        <td>
-                            @foreach ($products as $product)
-                            @if ($product->image_id === $image->id)
-                            {{$product->name}},
-                            @endif
-                            @endforeach
-                        </td>
-                        <td><a href="{{route('product.create')}}" class="btn btn-primary">Tambah</a></td>
-                    </tr>
+                <tr>
+                    <td><img src="{{asset('storage/'.$image->file)}}" width="auto" height="60px" alt=""></td>
+                    <td>
+                        @foreach ($products as $product)
+                        @if ($product->image_id === $image->id)
+                        {{$product->name}},
+                        @endif
+                        @endforeach
+                    </td>
+                    <td><a href="{{route('product.create')}}" class="btn btn-primary">Tambah</a></td>
+                </tr>
                 @endforeach
             </tbody>
         </table>

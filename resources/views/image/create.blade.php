@@ -8,10 +8,19 @@
         <form action="{{route('image.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
+                <input type="text" id="name" class="form-control" name="name">
+            </div>
+            <div class="form-group">
                 <input type="file" id="file" class="form-control" name="file">
             </div>
             <div class="form-group">
-                <input type="number" value="1" id="template" class="form-control" name="template" placeholder="template">
+                <label for="category">Template</label>
+                <select name="template" id="template" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="100">full</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary">
