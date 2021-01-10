@@ -129,7 +129,7 @@
                             <h4>With {{$product->ingredient}}</h4>
                             <p class="text-justify">{{$product->desc}}</p>
                             <div class="pb-4">
-                                <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                                <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                                 <a target="_blank"
                                     href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                     class="btn btn-light">BELI PRODUK</a>
@@ -165,7 +165,7 @@
                             <h4>With {{$product->ingredient}}</h4>
                             <p class="text-justify">{{$product->desc}}</p>
                             <div class="pb-4">
-                                <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                                <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                                 <a target="_blank"
                                     href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                     class="btn btn-light">BELI PRODUK</a>
@@ -205,7 +205,7 @@
                                 <h4>With {{$product->ingredient}}</h4>
                                 <p class="text-justify">{{$product->desc}}</p>
                                 <div class="pb-4">
-                                    <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                                    <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                                     <a target="_blank"
                                         href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                         class="btn btn-light">BELI PRODUK</a>
@@ -244,7 +244,7 @@
                             <h3>{{$product->name}}</h3>
                             <h4>with {{$product->ingredient}}</h4>
                             <p class="text-justify">{{$product->desc}}</p>
-                            <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
+                            <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                             <div class="pb-4 text-center">
                                 <a target="_blank"
                                     href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},,apakah masih ada ?,apakah masih ada ?"

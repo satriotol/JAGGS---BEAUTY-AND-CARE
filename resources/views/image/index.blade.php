@@ -21,7 +21,8 @@
                     <td>
                         @foreach ($products as $product)
                         @if ($product->image_id === $image->id)
-                        {{$product->name}},
+                        <li>{{$product->name}}</li>
+                        
                         @endif
                         @endforeach
                     </td>
