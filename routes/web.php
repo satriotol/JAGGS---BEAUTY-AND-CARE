@@ -22,3 +22,5 @@ Route::get('/','MainController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('image','ImageController');
+Route::resource('product','ProductController');

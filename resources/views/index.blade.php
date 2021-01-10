@@ -66,10 +66,11 @@
         p {
             font-size: 15px;
         }
+
         .h-100px {
-        height: 200px;
-        width: auto;
-    }
+            height: 200px;
+            width: auto;
+        }
     }
 
 </style>
@@ -93,6 +94,7 @@
         </div>
     </div>
 </section>
+@foreach ($images as $image)
 <section class="content">
     <div class="container-fluid border-bottom py-5">
         <div class="row d-flex justify-content-center ">
@@ -101,44 +103,39 @@
                     <div class="row">
                         <div>
                             <a class="image-link" href="Asset/KATALOG 20 HAL IN COVER FIX PDF_page-0002.jpg">
-                                <img src="Asset/KATALOG 20 HAL IN COVER FIX PDF_page-0002.jpg" alt="">
+                                @foreach ($products as $product)
+                                @if ($loop->first)
+                                <img src="{{asset('storage/'.$image->file)}}" alt="">
+                                @endif
+                                @endforeach
                             </a>
                         </div>
                     </div>
                     <div class="row mt-2" data-aos="fade-down" data-aos-duration="1500">
+                        @foreach ($products as $product)
+                        @if ($product->image_id === $image->id)
+                        @if ($loop->index < 2)
                         <div class="col-sm-12 col-md-6 border pt-4">
-                            <h3>WHITENING DAY CREAM</h3>
+                            <h3>{{$product->name}}</h3>
                             <h4>With Vitamin B3, Aloe Vera and UVA UVB Protector</h4>
-                            <p class="text-justify">Merawat kecantikan dan kecerahan kulit dengan kandungan yang
-                                menutrisi dan
-                                melindungi dari pengaruh buuk sinar matahari secara optimal.</p>
+                            <p class="text-justify">{{$product->desc}}</p>
                             <div class="pb-4">
                                 <p><i>Netto 12,5g</i> | <i>IDR. 55.000</i></p>
                                 <a target="_blank"
-                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk WHITENING DAY CREAM,apakah masih ada ?"
-                                    class="btn btn-light">BELI PRODUK</a>
+                                href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk WHITENING DAY CREAM,apakah masih ada ?"
+                                class="btn btn-light">BELI PRODUK</a>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 border pt-4">
-                            <h3>WHITENING NIGHT CREAM</h3>
-                            <h4>With Vitamin B3, Alfa Arbutin, Retinol, Aloe Vera and Vitamin E</h4>
-                            <p class="text-justify">Mencerahkan warna kulit secara optimal saat Anda istirahat dimalam
-                                hari
-                                dengan kandungan yang sinergi untuk menghambat proses pembentukan melanin, menyamarkan
-                                tanda
-                                penuaan, mengencangkan dan menutrisi.</p>
-                            <div class="pb-4">
-                                <p><i>Netto 12,5g</i> | <i>IDR. 60.000</i></p>
-                                <a target="_blank"
-                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk WHITENING NIGHT CREAM,apakah masih ada ?"
-                                    class="btn btn-light">BELI PRODUK</a>
-                            </div>
-                        </div>
+                        @endif
+                        @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
 
         </div>
 </section>
+@endforeach
+
 
 @endsection

@@ -61,12 +61,11 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                     style="display: none;">
                                     @csrf
@@ -80,7 +79,22 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tambah Produk</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
