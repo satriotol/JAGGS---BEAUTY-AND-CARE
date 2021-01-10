@@ -79,14 +79,30 @@
         </nav>
 
         <main class="py-4">
+            @auth
             <div class="container">
+                @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{session()->get('success')}}
+                </div>
+                @endif
+                @if (session()->has('error'))
+                <div class="alert alert-danger">
+                    {{session()->get('error')}}
+                </div>
+                @endif
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Tambah Produk</li>
-                            </ul>
-                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="{{route('image.index')}}">Product</a>
+                            </li>
+                        </ul>
+                        <ul class="list-group mt-5">
+                            <li class="list-group-item">
+                                <a href="">Trashed Post</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-md-8">
                         @yield('content')
@@ -94,6 +110,9 @@
                 </div>
             </div>
         </main>
+        @else
+        @yield('content')
+        @endauth
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
