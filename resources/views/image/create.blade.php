@@ -11,6 +11,9 @@
                 <input type="file" id="file" class="form-control" name="file">
             </div>
             <div class="form-group">
+                <input type="number" value="1" id="template" class="form-control" name="template" placeholder="template">
+            </div>
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary">
             </div>
         </form>

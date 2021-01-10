@@ -11,6 +11,9 @@
                 <input type="text" id="name" class="form-control" name="name" placeholder="name">
             </div>
             <div class="form-group">
+                <input type="text" id="ingredient" class="form-control" name="ingredient" placeholder="ingredient">
+            </div>
+            <div class="form-group">
                 <input type="text" id="desc" class="form-control" name="desc" placeholder="desc">
             </div>
             <div class="form-group">

@@ -25,6 +25,7 @@ class CreateImageRequest extends FormRequest
     {
         return [
             'file'=>'required|image',
+            'template'=>'required',
         ];
     }
 }

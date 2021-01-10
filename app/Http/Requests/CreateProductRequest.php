@@ -25,6 +25,7 @@ class CreateProductRequest extends FormRequest
     {
         return [
             'name' => 'required',
+            'ingredient' => 'required',
             'desc' => 'required',
             'price' => 'required',
             'weight' => 'required',

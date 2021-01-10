@@ -117,12 +117,12 @@
                         @if ($loop->index < 2)
                         <div class="col-sm-12 col-md-6 border pt-4">
                             <h3>{{$product->name}}</h3>
-                            <h4>With Vitamin B3, Aloe Vera and UVA UVB Protector</h4>
+                            <h4>With {{$product->ingredient}}</h4>
                             <p class="text-justify">{{$product->desc}}</p>
                             <div class="pb-4">
-                                <p><i>Netto 12,5g</i> | <i>IDR. 55.000</i></p>
+                                <p><i>Netto {{$product->weight}}</i> | <i>IDR. {{$product->price}}</i></p>
                                 <a target="_blank"
-                                href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk WHITENING DAY CREAM,apakah masih ada ?"
+                                href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                 class="btn btn-light">BELI PRODUK</a>
                             </div>
                         </div>

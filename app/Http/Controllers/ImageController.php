@@ -39,7 +39,8 @@ class ImageController extends Controller
     {
         $image = $request->file->store('file');
         Image::create([
-            'file' => $image
+            'file' => $image,
+            'template' => $request->template
         ]);
         session()->flash('success','Image Create Successfully');
         return redirect(route('image.index'));
