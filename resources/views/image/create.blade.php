@@ -8,9 +8,11 @@
         <form action="{{route('image.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
+                <label for="">Nama</label>
                 <input type="text" id="name" class="form-control" name="name">
             </div>
             <div class="form-group">
+                <label for="">Gambar Produk</label>
                 <input type="file" id="file" class="form-control" name="file">
             </div>
             <div class="form-group">
