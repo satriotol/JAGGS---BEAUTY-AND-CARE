@@ -15,6 +15,7 @@
         crossorigin="anonymous" />
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
     <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="manifest" href="{{asset('landingpage/manifest.json')}}">
 
     <title>BEAUTY AND CARE</title>
 </head>
