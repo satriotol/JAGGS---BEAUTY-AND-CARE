@@ -56,7 +56,7 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('image.show',['image' => Image::findOrFail($id)])->with('product',Product::all());
     }
 
     /**

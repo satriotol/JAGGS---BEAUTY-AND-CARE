@@ -22,11 +22,12 @@
                         @foreach ($products as $product)
                         @if ($product->image_id === $image->id)
                         <li>{{$product->name}}</li>
-                        
                         @endif
                         @endforeach
                     </td>
-                    <td><a href="{{route('product.create')}}" class="btn btn-primary">Tambah</a></td>
+                    <td><a href="{{route('product.create',$image->id)}}" class="btn btn-primary">Tambah</a>
+                        <a href="{{route('image.show',$image->id)}}" class="btn btn-primary">Detail</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

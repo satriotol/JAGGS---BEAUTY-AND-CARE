@@ -81,7 +81,7 @@
 <section class="title">
     <div class="container-fluid border-bottom py-5" style="background-color:#D9C145">
         <div class="text-center mt-5">
-            <img class="h-100px img-fluid" src="{{asset('logo.png')}}" alt="">
+            <img class="h-100px img-fluid" src="{{asset('LOGO.png')}}" alt="">
             <div class="mt-5">
 
                 <p>PT. Muntira Kosmeditama <br>
