@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Image;
 use App\Product;
 use Illuminate\Http\Request;
@@ -26,6 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+
         return view('product.create')->with('images',Image::all());
     }
 
@@ -67,9 +69,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        return view('product.create')->with('product',$product)->with('images',Image::all());
+
     }
 
     /**
@@ -79,9 +82,12 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request,Product $product)
     {
-        //
+        $data = $request->only('name','ingredient','desc','price','weight','image_id');
+        $product->update($data);
+        session()->flash('success','Post Updated Successfully');
+        return redirect(route('image.index'));
     }
 
     /**

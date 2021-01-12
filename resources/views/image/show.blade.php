@@ -14,7 +14,7 @@
             <p>{{$product->desc}}</p>
             <p><i>Netto</i> {{$product->weight}}{{$product->unit}} | IDR. {{$product->price}}</p>
             <div class="d-flex justify-content-end mb-2">
-                <a href="" class="btn btn-warning mx-1">Edit</a>
+                <a href="{{route('product.edit',$product->id)}}" class="btn btn-warning mx-1">Edit</a>
                 <button class="btn btn-danger mx-1" onclick="handleDelete({{$product->id}})">Hapus</button>
             </div>
             @endif
