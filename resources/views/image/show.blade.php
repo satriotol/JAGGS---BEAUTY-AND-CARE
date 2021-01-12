@@ -9,7 +9,6 @@
         @foreach ($products as $product)
         <div class="content border">
             @if ($product->image == $image)
-            {{-- {{$counter++}} --}}
             <h5>{{$product->name}}</h5>
             <p>With {{$product->ingredient}}</p>
             <p>{{$product->desc}}</p>
@@ -21,6 +20,9 @@
             @endif
         </div>
         @endforeach
+        @if ($count == $image->template)
+        full
+        @endif
     </div>
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -53,5 +55,6 @@
         form.action = '/product/' + id;
         $('#deleteModal').modal('show');
     }
+
 </script>
 @endsection

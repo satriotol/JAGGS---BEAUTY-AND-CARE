@@ -56,8 +56,9 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        $counter = 1;
-        return view('image.show',['image' => Image::findOrFail($id)])->with('products',Product::all())->with('counter',$counter);
+        $jumlah = Product::where('image_id','=',$id)->get();
+        $count = $jumlah->count();
+        return view('image.show',['image' => Image::findOrFail($id)])->with('products',Product::all())->with('count',$count);
     }
 
     /**
@@ -89,9 +90,16 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Image $image)
     {
-        //
+        $products = $image->products();
+
+        foreach($products->get() as $product){
+            $product->delete();
+        }
+        $products->delete();
+        $image->delete();
+        return redirect(route('image.index'));
     }
 }
 ;

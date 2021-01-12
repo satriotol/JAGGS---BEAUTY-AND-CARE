@@ -25,8 +25,13 @@
                         @endif
                         @endforeach
                     </td>
-                    <td><a href="{{route('product.create',$image->id)}}" class="btn btn-primary">Tambah</a>
+                    <td><a href="{{route('product.create',$image->id)}}" class="btn btn-success">Tambah</a>
                         <a href="{{route('image.show',$image->id)}}" class="btn btn-primary">Detail</a>
+                        <form action="{{route('image.destroy',$image->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Hapus</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
