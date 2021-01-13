@@ -238,9 +238,9 @@
                         </div>
                     </div>
                     <div class="row mt-2" data-aos="fade-down" data-aos-duration="1500">
+                        @foreach ($products as $product)
+                        @if ($product->image_id === $image->id)
                         <div class="col-md-12 border pt-4">
-                            @foreach ($products as $product)
-                            @if ($product->image_id === $image->id)
                             <h3>{{$product->name}}</h3>
                             <h4>with {{$product->ingredient}}</h4>
                             <p class="text-justify">{{$product->desc}}</p>
@@ -250,9 +250,9 @@
                                     href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},,apakah masih ada ?,apakah masih ada ?"
                                     class="btn btn-light">BELI PRODUK</a>
                             </div>
-                            @endif
-                            @endforeach
                         </div>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
