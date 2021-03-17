@@ -85,7 +85,7 @@
             <div class="mt-5">
 
                 <p>PT. Muntira Kosmeditama <br>
-                    Clinic Skin Care : Jl. Sunan Kudus No. 223, Kudus, Jawa Tengah, 59316 Indonesia
+                    Alamat : Toko Natura medika. Jl. Siliwangi RT 05 RW 07 jekulo kudus.
                     <br> Telp : +6281376566319
                     <br> Email : naturamedika97@gmail.com
                 </p>
