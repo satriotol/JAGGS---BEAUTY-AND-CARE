@@ -85,16 +85,14 @@
             <div class="mt-5">
 
                 <p>PT. Muntira Kosmeditama <br>
-                    Clinic Skin Care : Jl. Sunan Kudus No. 223, Kudus, Jawa Tengah, 59316 Indoneia
-                    <br> Telp : 0291439010</p>
-
-                <p>Manufacture : Jl. Kudus - Jepara No 5050 Garung Lor, Kaliwungu. Kudus
-                    <br> Telp : 0291444443
+                    Clinic Skin Care : Jl. Sunan Kudus No. 223, Kudus, Jawa Tengah, 59316 Indonesia
+                    <br> Telp : +6281376566319
+                    <br> Email : naturamedika97@gmail.com
                 </p>
             </div>
             <div class="container">
                 <a target="_blank"
-                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Mendaftar Reseller, Bagaimana Caranya?"
+                    href="https://api.whatsapp.com/send?phone=+6281376566319&text=Saya Ingin Mendaftar Reseller, Bagaimana Caranya?"
                     class="btn btn-light txt-kuning w-100">
                     JOIN RESELLER
                 </a>
@@ -131,7 +129,7 @@
                             <div class="pb-4">
                                 <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                                 <a target="_blank"
-                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
+                                    href="https://api.whatsapp.com/send?phone=+6281376566319&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                     class="btn btn-light">BELI PRODUK</a>
                             </div>
                         </div>
@@ -167,7 +165,7 @@
                             <div class="pb-4">
                                 <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                                 <a target="_blank"
-                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
+                                    href="https://api.whatsapp.com/send?phone=+6281376566319&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                     class="btn btn-light">BELI PRODUK</a>
                             </div>
                             @endif
@@ -207,7 +205,7 @@
                                 <div class="pb-4">
                                     <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                                     <a target="_blank"
-                                        href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
+                                        href="https://api.whatsapp.com/send?phone=+6281376566319&text=Saya Ingin Membeli Produk {{$product->name}},apakah masih ada ?"
                                         class="btn btn-light">BELI PRODUK</a>
                                 </div>
                             </div>
@@ -247,7 +245,7 @@
                             <p><i>Netto {{$product->weight}} {{$product->unit}}</i> | <i>IDR. {{$product->price}}</i></p>
                             <div class="pb-4 text-center">
                                 <a target="_blank"
-                                    href="https://api.whatsapp.com/send?phone=+6285772631690&text=Saya Ingin Membeli Produk {{$product->name}},,apakah masih ada ?,apakah masih ada ?"
+                                    href="https://api.whatsapp.com/send?phone=+6281376566319&text=Saya Ingin Membeli Produk {{$product->name}},,apakah masih ada ?,apakah masih ada ?"
                                     class="btn btn-light">BELI PRODUK</a>
                             </div>
                         </div>
